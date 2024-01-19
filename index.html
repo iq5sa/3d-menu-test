@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3D menu</title>
-
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
     <style>
         body,
         html {
@@ -37,12 +37,11 @@
     <div class="container">
         <h3 style="text-align: center;">3D Menu test</h3>
         <!-- Use it like any other HTML element -->
-        <model-viewer id="reveal" loading="eager" alt="pizza large 3D" src="/src/assets/pizza-light.glb" ar
-            environment-image="/src/assets/white_furnace.hdr" poster="/src/assets/pizaa-poster.jpg" shadow-intensity="1"
+        <model-viewer id="reveal" loading="eager" alt="pizza large 3D" src="assets/pizza-light.glb" ar
+            environment-image="assets/white_furnace.hdr" poster="assets/pizaa-poster.jpg" shadow-intensity="1"
             camera-controls touch-action="pan-y"></model-viewer>
 
-        <script type="module"
-            src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
+
     </div>
 
 
