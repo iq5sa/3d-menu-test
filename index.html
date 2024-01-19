@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D menu</title>
+
+    <style>
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            margin: auto;
+            background-color: #fff;
+        }
+
+        model-viewer {
+            background-color: #fff;
+            overflow-x: hidden;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h3 style="text-align: center;">3D Menu test</h3>
+        <!-- Use it like any other HTML element -->
+        <model-viewer alt="pizza large 3D" src="/src/assets/pizza.glb" ar environment-image="" poster=""
+            shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+
+        <script type="module"
+            src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
+    </div>
+
+
+</body>
+
+</html>
