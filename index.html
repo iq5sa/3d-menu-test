@@ -37,8 +37,9 @@
     <div class="container">
         <h3 style="text-align: center;">3D Menu test</h3>
         <!-- Use it like any other HTML element -->
-        <model-viewer alt="pizza large 3D" src="https://jodx.dev/dumb/index.php" ar environment-image="" poster=""
-            shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+        <model-viewer id="reveal" loading="eager" alt="pizza large 3D" src="/src/assets/pizza-light.glb" ar
+            environment-image="/src/assets/white_furnace.hdr" poster="/src/assets/pizaa-poster.jpg" shadow-intensity="1"
+            camera-controls touch-action="pan-y"></model-viewer>
 
         <script type="module"
             src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
