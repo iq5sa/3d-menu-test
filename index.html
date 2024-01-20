@@ -1,50 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link type="text/css" rel="stylesheet" href="./assets/style.css" />
+    <title>منيو المــطعم</title>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D menu</title>
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
-    <style>
-        body,
-        html {
-            width: 100%;
-            height: 100%;
-            background-color: #ffffff;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            margin: auto;
-            background-color: #fff;
-        }
-
-        model-viewer {
-            background-color: #fff;
-            overflow-x: hidden;
-            width: 100%;
-            height: 100%;
-        }
-    </style>
-</head>
-
-<body>
+  <body>
     <div class="container">
-        <h3 style="text-align: center;">3D Menu test</h3>
-        <!-- Use it like any other HTML element -->
-        <model-viewer id="reveal" loading="eager" alt="pizza large 3D" src="assets/pizza-light.glb" ar
-            environment-image="assets/white_furnace.hdr" poster="assets/pizaa-poster.jpg" shadow-intensity="1"
-            camera-controls touch-action="pan-y"></model-viewer>
+      <h3 style="text-align: center; color: darkslategrey">مـنيو المــطعم</h3>
+      <!-- Use it like any other HTML element -->
+      <model-viewer
+        src="assets/models/pizza-light.glb"
+        ar
+        ar-modes="scene-viewer webxr quick-look"
+        camera-controls
+        poster="assets/images/pizza-poster.webp"
+        shadow-intensity="1"
+        auto-rotate
+        tone-mapping="commerce"
+      >
+        <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+        </div>
+        <button slot="ar-button" id="ar-button">View in your space</button>
 
+        <div id="ar-prompt">
+          <img src="assets/images/hand.png" />
+        </div>
 
+        <button id="ar-failure">AR is not tracking!</button>
+
+        <div class="slider">
+          <div class="slides">
+            <button
+              class="slide selected"
+              onclick="switchSrc(this, 'models/pizza-light')"
+              style="background-image: url('assets/images/pizza-poster.webp')"
+            ></button
+            ><button
+              class="slide"
+              onclick="switchSrc(this, 'models/burger')"
+              style="background-image: url('assets/images/burger.webp')"
+            ></button
+            ><button
+              class="slide"
+              onclick="switchSrc(this, 'models/chicken')"
+              style="background-image: url('assets/images/chicken-poster.webp')"
+            ></button
+            ><button
+              class="slide"
+              onclick="switchSrc(this, 'models/fast_food-v2')"
+              style="background-image: url('assets/images/fast_food_meal.webp')"
+            ></button
+            ><button
+              class="slide"
+              onclick="switchSrc(this, 'models/model-v2')"
+              style="
+                background-image: url('assets/images/food-model-poster.webp');
+              "
+            ></button
+            ><button
+              class="slide"
+              onclick="switchSrc(this, 'models/roti_canai-v2')"
+              style="background-image: url('assets/images/roti-meal.webp')"
+            ></button>
+          </div>
+        </div>
+      </model-viewer>
     </div>
 
-
-</body>
-
+    <script src="assets/script.js"></script>
+    <script
+      type="module"
+      src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"
+    ></script>
+  </body>
 </html>
